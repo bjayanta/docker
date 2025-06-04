@@ -8,7 +8,7 @@ Docker
 
 ### Topics:
 
-1. Docker
+1. Docker Intro
 2. Image
 3. Container
 4. Volume
