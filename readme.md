@@ -1,18 +1,17 @@
-Docker
+Docker Intro
 
-[Download & Installation](https://docs.docker.com/engine/install/)
+## What is docker?
 
-[Documentation](https://docs.docker.com/manuals/)
+Docker is an open-source platform that enables developers to build, share, deploy, run, update and manage containers.
 
-[Workshop](https://docs.docker.com/get-started/workshop/)
+It packages applications into lightweight, self-contained containers that include everything needed to run, such as the application code, runtime environment, libraries, and system tools. This ensures consistency and portability, allowing applications to run reliably on different systems.
 
-### Topics:
+- Programming language: Go
+- Developer: Docker, Inc.
+- Initial release date: March 20, 2013
 
-1. Docker
-2. Image
-3. Container
-4. Volume
-5. Compose
-6. Networking
+![What is Docker?](https://www.docker.com/app/uploads/2021/11/container-what-is-container-1080x935.png)
+
+[Previous](https://github.com/bjayanta/docker) | [Next](https://github.com/bjayanta/docker)
 
 Thank you.
