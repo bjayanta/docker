@@ -12,6 +12,4 @@ It packages applications into lightweight, self-contained containers that includ
 
 ![What is Docker?](https://www.docker.com/app/uploads/2021/11/container-what-is-container-1080x935.png)
 
-[Previous](https://github.com/bjayanta/docker) | [Next](https://github.com/bjayanta/docker)
-
 Thank you.
