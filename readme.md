@@ -1,20 +1,61 @@
 Project
 
-Pull Ubuntu
+Dockerize a JS app
 
 ## Tasks
 
-1. Download ubuntu image
-2. Run the image
-3. Create a directory inside the ubuntu os
-4. Create a file inside the directory
-5. Stop the container using terminal
+1. Create a basic iteration from 0 - 10
+2. Run the project through terminal using node
+3. Make a dockerfile and explain the steps
+4. Make/Build an image
+5. Delete the image
+6. Make an image with name and tag
+7. Make sure the image is created
+8. Run the image using container name
+9. Delete the container using terminal
 
-### Task 1. Download ubuntu image
+### Task 1. Create a basic iteration from 0 - 10
 
-Get a Ubuntu LTS image:
+Basic iteration app:
 
-> docker pull ubuntu
+```js
+for (let i = 0; i < 10; i++) {
+  console.log("Iteration number: " + i);
+}
+```
+
+### Task 2. Run the project through terminal using node
+
+Syntax:
+
+> node <entry-point>
+
+Example
+
+> node app.js
+
+### Task 3. Make a dockerfile and explain the steps
+
+Step 1: Create a file named 'Dockerfile'
+
+Step 2: Write the instructions
+
+```docker
+# Add dependency
+FROM node:22
+
+# Create a directory inside container where the app will be.
+# In my case it is '/app'
+WORKDIR /app
+
+# Copy everything from current to '/app' directory
+# First dot represent the '/app' directory
+# Second dot represent the current directory
+COPY . .
+
+# Which command will be execute after start the container
+CMD [ "node", "app.js" ]
+```
 
 Run the image:
 
@@ -24,34 +65,38 @@ Show all containers:
 
 > docker ps -a
 
-### Task 2. Run the image
+### Task 4. Make/Build an image
 
-With interactive mode:
+> docker build -t <image-name>
 
-> docker run -it ubuntu
+> docker build -t iteration-app .
 
-### Task 3. Create a directory inside the ubuntu os
+### Task 5. Delete the image
 
-First show all directory and files
+> docker image rm <image-name>
 
-> ls
+> docker image rm iteration-app
 
-Create a directory:
+### Task 6. Make an image with name and tag
 
-> mkdir <directory-name>
+> docker build -t <image-name>:<tag-name>
 
-Make sure the directory is created or not:
+> docker build -t iteration-app:v1 .
 
-> ls
+### Task 7. Make sure the image is created
 
-### Task 4. Create a file inside the directory
+> docker images
 
-> cd <directory-name>
+### Task 8. Run the image using container name
 
-> touch <file-name>
+> docker run -it --name <container-name> <image-name>
 
-### Task 5. Stop the container using terminal
+> docker run -it --name iteration-app iteration-app
+
+### Task 9. Delete the container using terminal
 
 > docker container stop <container-id-or-name>
+
+> docker container stop iteration-app
 
 Thank you.
