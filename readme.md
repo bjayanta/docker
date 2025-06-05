@@ -1,10 +1,10 @@
 Project
 
-Dockerize a JS app
+Dockerize a Node.js app
 
 ## Tasks
 
-1. Create a basic iteration from 0 - 10
+1. Create a "Hello World" app using express and node
 2. Run the project through terminal using node
 3. Make a dockerfile and explain the steps
 4. Make/Build an image
