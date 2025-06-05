@@ -42,6 +42,20 @@ Run an image in interactive mode:
 
 > docker run -it node:lts-alpine
 
+Delete an image:
+
+> docker rm `<image-id>`
+
+> docker rm `<image-name>`
+
+Force delete an image:
+
+> docker rm `<image-id>` -f
+
+> docker rm `<image-name>` -f
+
+NB. You can not delete image it image container is running. First stop the container, after that delete the image.
+
 Show all containers:
 
 > docker ps -a
