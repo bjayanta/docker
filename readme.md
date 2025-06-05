@@ -2,59 +2,17 @@ Image
 
 ## What is docker image?
 
-A Docker image is a lightweight, standalone, executable package of software that contains everything needed to run an application.
+A Docker container is a lightweight, standalone, and executable package of software that includes everything needed to run an application, such as code, libraries, and dependencies. It's a running instance of a Docker image, providing a consistent environment for the application to run regardless of the underlying infrastructure.
 
-Here's a more detailed breakdown:
+How Docker Containers Work:
 
-- Read-only template: A Docker image is a read-only file that contains all the necessary instructions and files to run a container.
+- Build an Image: Developers create a Docker image using a Dockerfile, which specifies the base operating system, application code, and dependencies.
 
-- Built from a Dockerfile: Docker images are created by running instructions from a Dockerfile.
+- Run a Container: The Docker image is then used to create a Docker container, which is a running instance of the image.
 
-- Container blueprint: Docker images act as a blueprint for creating Docker containers.
-
-- Immutable: Once an image is created, it cannot be modified; you need to build a new image for changes.
-
-- Layered structure: Docker images are built in layers, where each layer represents a change to the file system.
-
-- Reusable and portable: Docker images can be easily shared and deployed across different systems.
+- Application Execution: The container provides a self-contained environment for the application to run, including its own file system, processes, and network.
 
 ## Commands
-
-Pull/Download an image:
-
-> docker pull `<image-name>`:`<tag>`
-
-> docker pull node:lts-alpine
-
-Show all images:
-
-> docker images
-
-Run an image:
-
-> docker run `<image-name>`:`<tag>`
-
-> docker run node:lts-alpine
-
-Run an image in interactive mode:
-
-> docker run -it `<image-name>`:`<tag>`
-
-> docker run -it node:lts-alpine
-
-Delete an image:
-
-> docker rm `<image-id>`
-
-> docker rm `<image-name>`
-
-Force delete an image:
-
-> docker rm `<image-id>` -f
-
-> docker rm `<image-name>` -f
-
-NB. You can not delete image it image container is running. First stop the container, after that delete the image.
 
 Show all containers:
 
@@ -68,14 +26,24 @@ Show all running containers:
 
 Stop a running container:
 
-> docker stop `<container-id>`
+> docker container stop `<container-id>`
 
-> docker stop `<container-name>`
+> docker container stop `<container-name>`
 
-Remove a container:
+Delete/Remove a container:
 
-> docker rm `<container-id>`
+> docker container rm `<container-id>`
 
-> docker rm `<container-name>`
+> docker container rm `<container-name>`
+
+Force delete/remove a container:
+
+> docker container rm `<container-id>` -f
+
+> docker container rm `<container-name>` -f
+
+Delete all containers:
+
+> docker container prune
 
 Thank you.
