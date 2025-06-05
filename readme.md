@@ -1,49 +1,57 @@
-Image
+Project
 
-## What is docker image?
+Pull Ubuntu
 
-A Docker container is a lightweight, standalone, and executable package of software that includes everything needed to run an application, such as code, libraries, and dependencies. It's a running instance of a Docker image, providing a consistent environment for the application to run regardless of the underlying infrastructure.
+## Tasks
 
-How Docker Containers Work:
+1. Download ubuntu image
+2. Run the image
+3. Create a directory inside the ubuntu os
+4. Create a file inside the directory
+5. Stop the container using terminal
 
-- Build an Image: Developers create a Docker image using a Dockerfile, which specifies the base operating system, application code, and dependencies.
+### Task 1. Download ubuntu image
 
-- Run a Container: The Docker image is then used to create a Docker container, which is a running instance of the image.
+Get a Ubuntu LTS image:
 
-- Application Execution: The container provides a self-contained environment for the application to run, including its own file system, processes, and network.
+> docker pull ubuntu
 
-## Commands
+Run the image:
+
+> docker run ubuntu
 
 Show all containers:
 
 > docker ps -a
 
-NB. -a stands for all.
+### Task 2. Run the image
 
-Show all running containers:
+With interactive mode:
 
-> docker ps
+> docker run -it ubuntu
 
-Stop a running container:
+### Task 3. Create a directory inside the ubuntu os
 
-> docker container stop `<container-id>`
+First show all directory and files
 
-> docker container stop `<container-name>`
+> ls
 
-Delete/Remove a container:
+Create a directory:
 
-> docker container rm `<container-id>`
+> mkdir <directory-name>
 
-> docker container rm `<container-name>`
+Make sure the directory is created or not:
 
-Force delete/remove a container:
+> ls
 
-> docker container rm `<container-id>` -f
+### Task 4. Create a file inside the directory
 
-> docker container rm `<container-name>` -f
+> cd <directory-name>
 
-Delete all containers:
+> touch <file-name>
 
-> docker container prune
+### Task 5. Stop the container using terminal
+
+> docker container stop <container-id-or-name>
 
 Thank you.
