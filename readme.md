@@ -1,15 +1,67 @@
-Docker Intro
+Image
 
-## What is docker?
+## What is docker image?
 
-Docker is an open-source platform that enables developers to build, share, deploy, run, update and manage containers.
+A Docker image is a lightweight, standalone, executable package of software that contains everything needed to run an application.
 
-It packages applications into lightweight, self-contained containers that include everything needed to run, such as the application code, runtime environment, libraries, and system tools. This ensures consistency and portability, allowing applications to run reliably on different systems.
+Here's a more detailed breakdown:
 
-- Programming language: Go
-- Developer: Docker, Inc.
-- Initial release date: March 20, 2013
+- Read-only template: A Docker image is a read-only file that contains all the necessary instructions and files to run a container.
 
-![What is Docker?](https://www.docker.com/app/uploads/2021/11/container-what-is-container-1080x935.png)
+- Built from a Dockerfile: Docker images are created by running instructions from a Dockerfile.
+
+- Container blueprint: Docker images act as a blueprint for creating Docker containers.
+
+- Immutable: Once an image is created, it cannot be modified; you need to build a new image for changes.
+
+- Layered structure: Docker images are built in layers, where each layer represents a change to the file system.
+
+- Reusable and portable: Docker images can be easily shared and deployed across different systems.
+
+## Commands
+
+Pull/Download an image:
+
+> docker pull `<image-name>`:`<tag>`
+
+> docker pull node:lts-alpine
+
+Show all images:
+
+> docker images
+
+Run an image:
+
+> docker run `<image-name>`:`<tag>`
+
+> docker run node:lts-alpine
+
+Run an image in interactive mode:
+
+> docker run -it `<image-name>`:`<tag>`
+
+> docker run -it node:lts-alpine
+
+Show all containers:
+
+> docker ps -a
+
+NB. -a stands for all.
+
+Show all running containers:
+
+> docker ps
+
+Stop a running container:
+
+> docker stop `<container-id>`
+
+> docker stop `<container-name>`
+
+Remove a container:
+
+> docker rm `<container-id>`
+
+> docker rm `<container-name>`
 
 Thank you.
