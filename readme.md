@@ -26,7 +26,7 @@ Dockerize a Node.js app
 
 Syntax:
 
-> node <entry-point>
+> node `<entry-point>`
 
 Example
 
@@ -75,7 +75,7 @@ package-lock.json
 
 ### Task 5. Make/Build an image with name and tag
 
-> docker build -t <image-name>:<tag-name>
+> docker build -t `<image-name>`:`<tag-name>`
 
 > docker build -t iteration-app:v1 .
 
@@ -85,7 +85,7 @@ package-lock.json
 
 ### Task 7. Run the image using container name
 
-> docker run -it --name <container-name> <image-name>
+> docker run -it --name `<container-name>` `<image-name>`
 
 > docker run -it --name iteration-app iteration-app
 
@@ -93,11 +93,11 @@ package-lock.json
 
 ### Task 9. Delete the image
 
-> docker image rm <image-name>
+> docker image rm `<image-name>`
 
 > docker image rm iteration-app
 
-> docker container stop <container-id-or-name>
+> docker container stop `<container-id-or-name>`
 
 > docker container stop iteration-app
 
