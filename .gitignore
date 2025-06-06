@@ -1,4 +1,2 @@
-basic-app
-
-docker-compose.yaml
-YouTube.txt
+node_modules/
+package-lock.json

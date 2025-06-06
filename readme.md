@@ -24,11 +24,19 @@ Show all running containers:
 
 > docker ps
 
+Run a container
+
+> docker run --name `<container-name>` -p `<local-port>`:`<remote-port>` `<image-name>`:`<image-tag>`
+
 Stop a running container:
 
 > docker container stop `<container-id>`
 
 > docker container stop `<container-name>`
+
+Remove container when the container stop
+
+> docker run -p `<local-port>`:`<remote-port>` --rm `<image-name>`
 
 Delete/Remove a container:
 
@@ -42,8 +50,12 @@ Force delete/remove a container:
 
 > docker container rm `<container-name>` -f
 
-Delete all containers:
+Delete/Remove all containers:
 
 > docker container prune
+
+Delete/Remove all images & containers:
+
+> docker system prune -a
 
 Thank you.
