@@ -1,0 +1,24 @@
+{
+  "name": "docker",
+  "version": "1.0.0",
+  "description": "Project",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon -L app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjayanta/docker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bjayanta/docker/issues"
+  },
+  "homepage": "https://github.com/bjayanta/docker#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
