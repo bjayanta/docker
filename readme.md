@@ -11,8 +11,9 @@ Dockerize a Node.js app
 5. Make/Build an image with name and tag
 6. Make sure the image is created
 7. Run the image using container name
-8. Delete the container using terminal
-9. Delete the image
+8. Stop the container
+9. Delete the container
+10. Delete the image
 
 ### Task 1. Create a basic iteration from 0 - 10
 
@@ -85,20 +86,30 @@ package-lock.json
 
 ### Task 7. Run the image using container name
 
-> docker run -it --name `<container-name>` `<image-name>`
+> docker run --name `<container-name>` -p `<port-local>`:`<port-container>` `<image-name>`
 
-> docker run -it --name iteration-app iteration-app
+With interactive mode
 
-### Task 8. Delete the container using terminal
+> docker run -it --name `<container-name>` -p `<port-local>`:`<port-container>` `<image-name>`
 
-### Task 9. Delete the image
+> docker run -it --name hello-world-c1 -p 5000:5000 hello-world:v1
 
-> docker image rm `<image-name>`
-
-> docker image rm iteration-app
+### Task 8. Stop the container
 
 > docker container stop `<container-id-or-name>`
 
-> docker container stop iteration-app
+> docker container stop hello-world-c1
+
+### Task 9. Delete the container
+
+> docker container rm `<container-id-or-name>`
+
+> docker container rm hello-world-c1
+
+### Task 10. Delete the image
+
+> docker image rm `<image-name>`
+
+> docker image rm hello-world-c1
 
 Thank you.
